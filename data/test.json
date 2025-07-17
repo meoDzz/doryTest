@@ -5,7 +5,7 @@
       "setName": "Dory Language Center - Placement Test",
       "reading": {
         "title": "Reading & Use of English",
-        "timeLimit": 25,
+        "timeLimit": 600,
         "parts": [
           {
             "partTitle": "Part 1: Choose the best response",
@@ -96,7 +96,7 @@
       },
       "listening": {
         "title": "Listening",
-        "timeLimit": 15,
+        "timeLimit": 300,
         "parts": [
           {
             "partTitle": "Part 1: Questions and responses",
@@ -140,7 +140,7 @@
       },
       "writing": {
         "title": "Writing",
-        "timeLimit": 10,
+        "timeLimit": 300,
         "questions": [
           {
             "id": 1,
