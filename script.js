@@ -261,15 +261,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateNavButtons() {
-        const isMatching = selectedTestSet[currentSection]?.parts?.some(p => p.matching);
-        if(isMatching) {
-             prevBtn.disabled = true; nextBtn.disabled = true;
-             submitBtn.style.display = 'inline-block';
-        } else {
-            prevBtn.disabled = currentQuestionIndex === 0;
-            nextBtn.disabled = currentQuestionIndex === totalQuestions - 1;
-            submitBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'inline-block' : 'none';
-        }
+        // const isMatching = selectedTestSet[currentSection]?.parts?.some(p => p.matching);
+        // if(isMatching) {
+        //      prevBtn.disabled = false; nextBtn.disabled = false;
+        //      submitBtn.style.display = 'inline-block';
+        // } else {
+        //     prevBtn.disabled = currentQuestionIndex === 0;
+        //     nextBtn.disabled = currentQuestionIndex === totalQuestions - 1;
+        //     submitBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'inline-block' : 'none';
+        // }
+        prevBtn.disabled = currentQuestionIndex === 0;
+        nextBtn.disabled = currentQuestionIndex === totalQuestions - 1;
+        submitBtn.style.display = currentQuestionIndex === totalQuestions - 1 ? 'inline-block' : 'none';
     }
 
     function startTimer(duration) {
