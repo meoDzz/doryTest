@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         test: document.getElementById('test-screen'),
         result: document.getElementById('result-screen')
     };
-    const testSetList = document.getElementById('test-set-list');
+    // const testSetList = document.getElementById('test-set-list');
+        const testSetSelect = document.getElementById('test-set-select'); // THÊM DÒNG NÀY
+    const startTestBtn = document.getElementById('start-test-btn'); // THÊM DÒNG NÀY
     const studentInfoForm = document.getElementById('student-info-form');
     const selectedTestName = document.getElementById('selected-test-name');
     const sectionTitle = document.getElementById('section-title');
@@ -31,32 +33,84 @@ document.addEventListener('DOMContentLoaded', () => {
     let previousPartAudio = null; // Biến để theo dõi audio của part trước đó
 
     emailjs.init(EMAILJS_PUBLIC_KEY);
-    fetch('data/test.json')
-        .then(response => response.json())
-        .then(data => {
-            testData = data;
-            loadTestSets();
-        }).catch(error => console.error('Error loading test data:', error));
+    // fetch('data/testcopy.json','data/test.json')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         testData = data;
+    //         loadTestSets();
+    //     }).catch(error => console.error('Error loading test data:', error));
+    
+    Promise.all([
+        fetch('data/testcopy.json').then(response => response.json()),
+        fetch('data/test.json').then(response => response.json())
+    ])
+    .then(results => {
+        const testCopyData = results[0];
+        const testOriginalData = results[1];
+
+        // Kết hợp dữ liệu testSets từ cả hai file
+        testData = {
+            testSets: [
+                ...(testCopyData.testSets || []),
+                ...(testOriginalData.testSets || [])
+            ]
+        };
+        loadTestSets();
+    })
+    .catch(error => {
+        console.error('Error loading one or more test data files:', error);
+    });
+
 
     function showScreen(screenName) {
         Object.values(screens).forEach(screen => screen.classList.add('hidden'));
         if (screens[screenName]) screens[screenName].classList.remove('hidden');
     }
 
+    // function loadTestSets() {
+    //     testSetList.innerHTML = '';
+    //     testData.testSets.forEach((testSet, index) => {
+    //         const button = document.createElement('button');
+    //         button.className = 'test-set-btn';
+    //         button.textContent = testSet.setName;
+    //         button.addEventListener('click', () => {
+    //             selectedTestSet = testData.testSets[index];
+    //             showScreen('infoForm');
+    //         });
+    //         testSetList.appendChild(button);
+    //     });
+    //     showScreen('testSelection');
+    // }
     function loadTestSets() {
-        testSetList.innerHTML = '';
+        testSetSelect.innerHTML = '<option value="">-- Select a Test Set --</option>'; // Thêm option mặc định
         testData.testSets.forEach((testSet, index) => {
-            const button = document.createElement('button');
-            button.className = 'test-set-btn';
-            button.textContent = testSet.setName;
-            button.addEventListener('click', () => {
-                selectedTestSet = testData.testSets[index];
-                showScreen('infoForm');
-            });
-            testSetList.appendChild(button);
+            const option = document.createElement('option');
+            option.value = index; // Lưu index của test set vào value
+            option.textContent = testSet.setName;
+            testSetSelect.appendChild(option);
         });
         showScreen('testSelection');
     }
+    testSetSelect.addEventListener('change', (e) => {
+        const selectedIndex = parseInt(e.target.value);
+        if (!isNaN(selectedIndex) && selectedIndex >= 0) {
+            selectedTestSet = testData.testSets[selectedIndex];
+            startTestBtn.classList.remove('hidden'); // Hiển thị nút Start Test
+        } else {
+            selectedTestSet = null;
+            startTestBtn.classList.add('hidden'); // Ẩn nút Start Test nếu không có lựa chọn hợp lệ
+        }
+    });
+
+    startTestBtn.addEventListener('click', () => {
+        if (selectedTestSet) {
+            selectedTestName.textContent = selectedTestSet.setName;
+            showScreen('infoForm');
+        } else {
+            alert('Please select a test set to begin.');
+        }
+    });
+
 
     studentInfoForm.addEventListener('submit', e => {
         e.preventDefault();

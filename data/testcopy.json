@@ -1,0 +1,157 @@
+{
+  "testSets": [
+    {
+      "id": "dory_placement_test_1",
+      "setName": "Dory Language Center 2 - Placement Test",
+      "reading": {
+        "title": "Reading & Use of English",
+        "timeLimit": 600,
+        "parts": [
+          {
+            "partTitle": "Part 1: Choose the best response",
+            "instructions": "Choose the best response for each of the following situation.",
+            "questions": [
+              { "id": 1, "questionText": "The Browns have invited the Greens for tea today. What do they say when their guests arrive? [cite: 7]", "options": ["Welcome.", "Glad you could come.", "We’re looking forward to seeing you."], "answer": "B" },
+              { "id": 2, "questionText": "Mr. Brown doesn’t hear what Mrs. Green is saying. What does he say to her? [cite: 10]", "options": ["Excuse me!", "How are you?", "I beg your pardon?"], "answer": "C" },
+              { "id": 3, "questionText": "But the sugar is beside Mr. Brown and she can’t reach it. What does she say to get the sugar? [cite: 13]", "options": ["More sugar?", "Hand me the sugar!", "Pass me the sugar, please."], "answer": "C" },
+              { "id": 4, "questionText": "Of course Mr. Brown helps her at once. What does he say when gives her the sugar? [cite: 15]", "options": ["Please", "Here you are", "Excuse me"], "answer": "B" },
+              { "id": 5, "questionText": "The hostess is handing round the cakes to her guests so what does she say? [cite: 18]", "options": ["There you are.", "Please", "Help yourselves, please"], "answer": "C" },
+              { "id": 6, "questionText": "You meet somebody for the first time. He says “How do you do” to you. How should you answer? [cite: 20]", "options": ["How do you do?", "I’m fine, thank you.", "Thank you, the same to you."], "answer": "A" },
+              { "id": 7, "questionText": "Somebody has happened to stand on your foot or bump against you lightly in the street. He says “I’m sorry!”. How can you answer? [cite: 22, 23]", "options": ["It was my pleasure.", "Excuse me.", "That’s all right!"], "answer": "C" },
+              { "id": 8, "questionText": "Bill has a lot of work to do. Peter wants him to come with him to a dance. Bill can’t come so what does he answer? [cite: 25, 26]", "options": ["I’m busy.", "I’m in a hurry.", "It’s no use"], "answer": "A" },
+              { "id": 9, "questionText": "It’s Christmas and a friend of yours wishes you “Merry Christmas!” What could you say as an answer? [cite: 28]", "options": ["Thank you – the same to you.", "Many happy returns of the day.", "Congratulations."], "answer": "A" },
+              { "id": 10, "questionText": "You are going through the customs. What does the customs officer say to you when you are standing in front of him with all your luggage? [cite: 31]", "options": ["Can I help you?", "Have you got anything to declare?", "Anymore fares, please?"], "answer": "B" }
+            ]
+          },
+          {
+            "partTitle": "Part 2: Choose the best answer",
+            "instructions": "Choose the best answer to complete each sentence.",
+            "questions": [
+              { "id": 11, "questionText": "Most ______ students couldn’t finish the exam on time. [cite: 35]", "options": ["of", "some", "the", "of the"], "answer": "D" },
+              { "id": 12, "questionText": "I remember ______ the package a couple of days before going on holiday. [cite: 37]", "options": ["receiving", "to receive", "to be received", "to have received"], "answer": "A" },
+              { "id": 13, "questionText": "I bought so many things that I didn’t have enough ______ for all of them. [cite: 39]", "options": ["room", "size", "area", "place"], "answer": "A" },
+              { "id": 14, "questionText": "Please ______ my best regards to your family! [cite: 41]", "options": ["let", "tell", "send", "say"], "answer": "C" },
+              { "id": 15, "questionText": "Don’t sit on the chair ______ the leg is broken. [cite: 43]", "options": ["on which", "over which", "of which", "from which"], "answer": "C" },
+              { "id": 16, "questionText": "I wasn’t in ______ of his idea about the renovation. [cite: 45]", "options": ["agreement", "content", "satisfied", "favor"], "answer": "D" },
+              { "id": 17, "questionText": "My birthday is on ______ of March. [cite: 47]", "options": ["the tenth", "tenth", "ten", "the ten"], "answer": "A" },
+              { "id": 18, "questionText": "“Could you lend me some money?” – “Sorry, I can’t. I’m ______ ”. [cite: 49]", "options": ["broken", "breaking", "broke", "break"], "answer": "C" },
+              { "id": 19, "questionText": "I had a mechanic ______ my car yesterday. [cite: 51]", "options": ["mend", "mended", "mending", "mends"], "answer": "A" },
+              { "id": 20, "questionText": "Some jungle fires are set on purpose. The underlined phrase can be best replaced with______ [cite: 53]", "options": ["at will", "deliberately", "by chance", "spontaneously"], "answer": "B" }
+            ]
+          },
+          {
+            "partTitle": "Part 3: Reading Comprehension",
+            "instructions": "Choose the word or phrase (A, B, C, or D) that best fits the blank space in the following passage. [cite: 56]",
+            "passage": "Puerto Rico is an island southeast of Florida and north of Venezuela, (21) ______ the Atlantic Ocean and the Caribbean Sea. It is not far from Haiti and the Dominican Republic. Puerto Rico has many beautiful beaches that (22) ______ for miles along the coast. It also has mountains and valleys with good land for farming. The climate in Puerto Rico is (23) ______ very warm. It is often humid during the summer months. Many people choose Puerto Rico as a vacation spot (24) ______ its lovely weather, beautiful coast and interesting history and culture. Puerto Rico means “rich port” in Spanish. Christopher Columbus landed there in 1493. Fifteen years later, the Spanish explorer Juan Ponce de Leon (25) ______ there with people from Spain (26) ______ came to live in the New World. Native Indians had lived on the island of Puerto Rico for hundreds of years. (27) ______, many of them died in wars with the Spanish and (28) ______ diseases brought from Europe. People from other places, like Africa, also came to live in Puerto Rico. Today Puerto Rico is an interesting mix of all these cultures. Visitors will notice the influence of Spain in the food, music, festivals and (29) ______ of the people. And, of course, the people in Puerto Rico speak Spanish – but they (30) ______ speak English. [cite: 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]",
+            "questions": [
+              { "id": 21, "options": ["among", "between", "across", "above"], "answer": "B" },
+              { "id": 22, "options": ["stretch", "are", "develops", "go"], "answer": "A" },
+              { "id": 23, "options": ["particularly", "unbelievably", "usually", "especially"], "answer": "C" },
+              { "id": 24, "options": ["because of", "thank to", "as", "such as"], "answer": "A" },
+              { "id": 25, "options": ["settled", "came", "went", "moved"], "answer": "A" },
+              { "id": 26, "options": ["whom", "which", "those", "who"], "answer": "D" },
+              { "id": 27, "options": ["Fortunately", "Especially", "Immediately", "Tragically"], "answer": "D" },
+              { "id": 28, "options": ["by", "in", "from", "for"], "answer": "C" },
+              { "id": 29, "options": ["custom", "customs", "many", "much"], "answer": "B" },
+              { "id": 30, "options": ["never", "some time", "sometimes", "also"], "answer": "D" }
+            ]
+          },
+          {
+            "partTitle": "Part 4: True/False",
+            "instructions": "Read the passage and decide whether the following statements are TRUE or FALSE. [cite: 80]",
+            "passage": "Why is the South Pole colder than the North Pole? Both polar regions of the earth are cold, primarily because they receive far less solar radiation than the tropics and mid-latitudes do. At either pole, the sun never rises more than 23.5 degrees above the horizon and both locations experience six months of continuous darkness. Moreover, most of the sunlight that does shine on the polar regions is reflected by the bright surface. What makes the South Pole much colder than the North Pole is that it sits on top of a very thick ice sheet, which itself sits on a continent. The surface of the ice sheet at the South Pole is more than 9,000 feet in elevation – more than a mile and a half above sea level. Antarctica is by far the highest continent on the earth. In comparison, the North Pole rests in the middle of the Arctic Ocean, where the surface of floating ice rides only a foot or so above the surrounding sea. The Arctic Ocean also acts as an effective heat reservoir, warming the cold atmosphere in the winter and drawing heat from the atmosphere in the summer. [cite: 81, 82, 83, 84, 85, 86, 87, 88, 89]",
+            "questions": [
+              { "id": 31, "questionText": "The polar regions are colder than other parts of the world mainly because they receive less light. [cite: 93]", "options": ["True", "False"], "answer": "A" },
+              { "id": 32, "questionText": "The sun is rarely high in the sky in the polar regions. [cite: 94]", "options": ["True", "False"], "answer": "A" },
+              { "id": 33, "questionText": "The fact that there is land at the South Pole means that it is colder than the North Pole. [cite: 95]", "options": ["True", "False"], "answer": "A" },
+              { "id": 34, "questionText": "The ice is roughly of the same thickness at the North and South Poles. [cite: 96]", "options": ["True", "False"], "answer": "B" },
+              { "id": 35, "questionText": "The Arctic Ocean helps balance the temperatures in different seasons. [cite: 97]", "options": ["True", "False"], "answer": "A" }
+            ]
+          },
+          {
+            "partTitle": "Part 5: Matching exercise",
+            "instructions": "The following people on the left all want to go on a day trip. Below you can see details of places to visit. Decide which place would be the most suitable for each person. [cite: 99, 100]",
+            "matching": {
+              "people": [
+                { "id": 36, "description": "Marco studies physics and is interested in anything to do with science. He'd like to visit somewhere to see some examples of early mechanical engines. [cite: 101, 102]" },
+                { "id": 37, "description": "Gemma wants to take her 5-year-old to see some animals. She'd also like to look around some shops to buy something for her mother's birthday. [cite: 103, 104]" },
+                { "id": 38, "description": "Ingrid's eldest daughter is learning about English history and would like to go somewhere to bring this subject to life. Ingrid is really interested in flowers. [cite: 105, 106]" },
+                { "id": 39, "description": "Trevor is an artist and enjoys drawing wildlife. He recently visited a zoo and drew large animals and would like to try sketching something smaller. [cite: 107]" },
+                { "id": 40, "description": "Sarah and her husband would like to spend the day outdoors. They don't like going on rides but are both interested in history and how people used to live. [cite: 108, 109]" }
+              ],
+              "places": [
+                { "id": "A", "description": "Stratford Butterfly Farm: The biggest butterfly farm in Europe... [cite: 111, 112, 113, 114, 115]" },
+                { "id": "B", "description": "National Sea-Life Centre: ...the only aquarium in the UK where you can see this creature... [cite: 116, 117, 118, 119]" },
+                { "id": "C", "description": "Coventry Transport Museum: ...hosts the world's largest transport collection... [cite: 120, 121, 122]" },
+                { "id": "D", "description": "Warwick Castle: Regarded by many as Britain's greatest Medieval Castle... [cite: 123, 124, 125, 126]" },
+                { "id": "E", "description": "ThinkTank: ...four floors of hands-on exhibits and historical collections... steam engines... [cite: 127, 128, 129]" },
+                { "id": "F", "description": "Drayton Manor: ...some of the scariest rides... Drayton Manor Zoo with over one hundred different species... [cite: 130, 131, 132]" },
+                { "id": "G", "description": "Hatton Country World: ...unique crafts and craft work side-by-side with antique shops... Farm Park with many farm animals... [cite: 133, 134, 135]" },
+                { "id": "H", "description": "Black Country Museum: ...Britain's friendliest open-air museum... discover an old-fashioned village... [cite: 136, 137, 138]" }
+              ],
+              "answers": { "36": "E", "37": "G", "38": "D", "39": "A", "40": "H" }
+            }
+          }
+        ]
+      },
+      "listening": {
+        "title": "Listening",
+        "timeLimit": 300,
+        "parts": [
+          {
+            "partTitle": "Part 1: Questions and responses",
+            "audio": "audio/PlacementPETPart1.mp3",
+            "instructions": "In this section, you will hear a question or statement followed by responses. Select the best response to the question or statement. [cite: 148, 149]",
+            "questions": [
+              { "id": 1, "questionText": "Listen to question 1", "options": ["A", "B", "C"], "answer": "A" },
+              { "id": 2, "questionText": "Listen to question 2", "options": ["A", "B", "C"], "answer": "B" },
+              { "id": 3, "questionText": "Listen to question 3", "options": ["A", "B", "C"], "answer": "C" },
+              { "id": 4, "questionText": "Listen to question 4", "options": ["A", "B", "C"], "answer": "B" },
+              { "id": 5, "questionText": "Listen to question 5", "options": ["A", "B", "C"], "answer": "A" }
+            ]
+          },
+          {
+            "partTitle": "Part 2: Short conversations",
+            "audio": "audio/PlacementPETPart2.mp3",
+            "instructions": "You will be asked to answer THREE QUESTIONS about what is said in each conversation. [cite: 157]",
+            "questions": [
+              { "id": 6, "questionText": "Where is this conversation taking place? [cite: 159]", "options": ["At a university", "At a hotel", "On the subway", "At home"], "answer": "B" },
+              { "id": 7, "questionText": "Why will the man leave his room late? [cite: 162]", "options": ["He will wake up late", "He is expecting a phone call", "He wants to stay longer", "He lost his room key"], "answer": "B" },
+              { "id": 8, "questionText": "What time will the man probably leave? [cite: 165]", "options": ["11:30", "11:00", "10:30", "10:00"], "answer": "A" },
+              { "id": 9, "questionText": "What is being explained? [cite: 168]", "options": ["How to make a photocopy", "How to make a phone call", "How to send a fax", "How to dial a number"], "answer": "A" },
+              { "id": 10, "questionText": "What will the woman put in the tray? [cite: 171]", "options": ["A folder", "Documents", "An original idea", "A phone number"], "answer": "B" },
+              { "id": 11, "questionText": "Which button should the woman press? [cite: 174]", "options": ["The red button", "The red button, the green button", "The green button, the red button", "The green button"], "answer": "D" }
+            ]
+          },
+          {
+            "partTitle": "Part 3: Short talks",
+            "audio": "audio/PlacementPETPart3.mp3",
+            "instructions": "You must answer THREE QUESTIONS about what is said in each talk. [cite: 179]",
+            "questions": [
+              { "id": 12, "questionText": "What kinds of activities are offered at this resort? [cite: 181]", "options": ["Indoor activities", "Outdoor activities", "Both indoor and outdoor activities", "Only children activities"], "answer": "C" },
+              { "id": 13, "questionText": "Which water activity is offered? [cite: 184]", "options": ["Swimming", "Scuba diving", "Water polo", "River rafting"], "answer": "D" },
+              { "id": 14, "questionText": "Who should guests contact with questions? [cite: 187]", "options": ["The hotel manager", "The activities coordinator", "The front desk", "The clerk"], "answer": "B" },
+              { "id": 15, "questionText": "Who are the new people in the department? [cite: 191]", "options": ["Beverly and Chava", "Chava and many others", "Hale and Chava", "Hale and Baverly"], "answer": "A" },
+              { "id": 16, "questionText": "Where is this meeting taking place? [cite: 194]", "options": ["At a university", "In a department store", "On a plane", "Over the phone"], "answer": "B" },
+              { "id": 17, "questionText": "What will everyone at the meeting receive? [cite: 197]", "options": ["A book", "An introduction", "A copy of the last meeting", "The department meeting schedule"], "answer": "D" }
+            ]
+          }
+        ]
+      },
+      "writing": {
+        "title": "Writing",
+        "timeLimit": 300,
+        "questions": [
+          {
+            "id": 1,
+            "questionText": "Write about your favorite holiday. Describe what you do and why you enjoy it. (Write at least 100 words)"
+          },
+          {
+            "id": 2,
+            "questionText": "Some people prefer to live in a big city, while others prefer a small town. Discuss both views and give your own opinion. (Write at least 150 words)"
+          }
+        ]
+      }
+    }
+  ]
+}
