@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         studentInfo = {
             fullName: document.getElementById('fullName').value,
+            className: document.getElementById('className').value, // <-- THÊM DÒNG NÀY
             dob: document.getElementById('dob').value,
             phone: document.getElementById('phone').value,
             email: document.getElementById('email').value
@@ -159,26 +160,74 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderQuestionNav() {
         questionNav.innerHTML = '';
-        const isMatching = selectedTestSet[currentSection]?.parts?.[0]?.matching;
-        if(isMatching) {
-            const btn = document.createElement('button');
-            btn.textContent = 1;
-            btn.className = 'nav-q-btn current';
-            questionNav.appendChild(btn);
-            return;
-        }
+        
+        // 1. Chỉ áp dụng logic màu sắc cho phần 'listening'
+        if (currentSection === 'listening') {
+            // 2. Mảng chứa các màu sắc cho từng part
+            const partColors = ['#E57373', '#64B5F6', '#81C784', '#FFD54F', '#BA68C8']; // Đỏ, Xanh, Lá, Vàng, Tím
 
+            let globalQuestionIndex = 0;
+            const parts = selectedTestSet[currentSection].parts;
+
+            // 3. Lặp qua từng part để lấy màu
+            parts.forEach((part, partIndex) => {
+                const color = partColors[partIndex % partColors.length]; // Lấy màu, lặp lại nếu hết màu
+
+                if (part.questions) {
+                    // 4. Lặp qua từng câu hỏi trong part để tạo nút
+                    part.questions.forEach(() => {
+                        const btn = document.createElement('button');
+                        btn.textContent = globalQuestionIndex + 1;
+                        btn.className = 'nav-q-btn';
+
+                        // 5. Gán sự kiện click
+                        const questionIdxForListener = globalQuestionIndex;
+                        btn.addEventListener('click', () => {
+                            currentQuestionIndex = questionIdxForListener;
+                            renderQuestion();
+                        });
+
+                        // 6. Logic tô màu chính
+                        if (globalQuestionIndex === currentQuestionIndex) {
+                            btn.classList.add('current'); // Ưu tiên màu cho câu hiện tại
+                        } else if (userAnswers[globalQuestionIndex]) {
+                            btn.classList.add('answered'); // Ưu tiên màu cho câu đã trả lời
+                        } else {
+                            // Chỉ tô màu nền cho các câu chưa làm và không phải câu hiện tại
+                            btn.style.backgroundColor = color;
+                            btn.style.color = 'white'; // Đảm bảo chữ màu trắng dễ đọc
+                        }
+                        
+                        questionNav.appendChild(btn);
+                        globalQuestionIndex++; // Tăng chỉ số câu hỏi toàn cục
+                    });
+                }
+            });
+        } else {
+            // ---- PHẦN SỬA LỖI CHO READING VÀ WRITING ----
+        // Đoạn mã kiểm tra "isMatching" bị lỗi đã được gỡ bỏ.
+        // Vòng lặp for đơn giản dưới đây sẽ tạo danh sách đầy đủ cho tất cả câu hỏi.
         for (let i = 0; i < totalQuestions; i++) {
             const btn = document.createElement('button');
             btn.textContent = i + 1;
             btn.className = 'nav-q-btn';
-            if (i === currentQuestionIndex) btn.classList.add('current');
-            if (userAnswers[i] || userAnswers[i + 1]) btn.classList.add('answered');
+            
+            // Kiểm tra trạng thái của nút
+            if (i === currentQuestionIndex) {
+                btn.classList.add('current');
+            } else if (userAnswers[i] || userAnswers[i+1]) { // Giữ lại logic kiểm tra câu trả lời
+                btn.classList.add('answered');
+            }
+
+            // Gán sự kiện click
+            const questionIdxForListener = i;
             btn.addEventListener('click', () => {
-                currentQuestionIndex = i;
+                currentQuestionIndex = questionIdxForListener;
                 renderQuestion();
             });
+            
             questionNav.appendChild(btn);
+        }
         }
     }
 
