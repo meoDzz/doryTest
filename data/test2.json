@@ -1,11 +1,11 @@
 {
   "testSets": [
     {
-      "id": "dory_placement_test_1",
-      "setName": "Dory Language Center 2 - Placement Test",
+      "id": "dory_placement_test",
+      "setName": "Dory Language Center - Placement Test 2",
       "reading": {
         "title": "Reading & Use of English",
-        "timeLimit": 600,
+        "timeLimit": 2100,
         "parts": [
           {
             "partTitle": "Part 1: Choose the best response",
@@ -96,7 +96,7 @@
       },
       "listening": {
         "title": "Listening",
-        "timeLimit": 300,
+        "timeLimit": 600,
         "parts": [
           {
             "partTitle": "Part 1: Questions and responses",
@@ -140,15 +140,11 @@
       },
       "writing": {
         "title": "Writing",
-        "timeLimit": 300,
+        "timeLimit": 900,
         "questions": [
           {
             "id": 1,
-            "questionText": "Write about your favorite holiday. Describe what you do and why you enjoy it. (Write at least 100 words)"
-          },
-          {
-            "id": 2,
-            "questionText": "Some people prefer to live in a big city, while others prefer a small town. Discuss both views and give your own opinion. (Write at least 150 words)"
+            "questionText": "What is your opinion about travelling?"
           }
         ]
       }

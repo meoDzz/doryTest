@@ -2,7 +2,7 @@
 const EMAILJS_SERVICE_ID = 'service_9h1ejxa';
 const EMAILJS_TEMPLATE_ID = 'template_rrfzyjl';
 const EMAILJS_PUBLIC_KEY = 'V8_GRui5iRp1N95Sx';
-const RECIPIENT_EMAIL = 'minhnhatledinh.vn@gmail.com'; // Email nhận kết quả
+const RECIPIENT_EMAIL = 'fo.dorycenter@gmail.com'; // Email nhận kết quả
 
 document.addEventListener('DOMContentLoaded', () => {
     const screens = {
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }).catch(error => console.error('Error loading test data:', error));
     
     Promise.all([
-        fetch('data/testcopy.json').then(response => response.json()),
-        fetch('data/test.json').then(response => response.json())
+        fetch('data/test.json').then(response => response.json()),
+        fetch('data/test2.json').then(response => response.json())
     ])
     .then(results => {
         const testCopyData = results[0];
