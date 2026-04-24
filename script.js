@@ -1,7 +1,7 @@
 // Cấu hình EmailJS - THAY THẾ CÁC GIÁ TRỊ NÀY
-const EMAILJS_SERVICE_ID = 'service_9h1ejxa';
-const EMAILJS_TEMPLATE_ID = 'template_rrfzyjl';
-const EMAILJS_PUBLIC_KEY = 'V8_GRui5iRp1N95Sx';
+const EMAILJS_SERVICE_ID = 'service_33010ao';
+const EMAILJS_TEMPLATE_ID = 'template_nzk2vv5';
+const EMAILJS_PUBLIC_KEY = 'rXDsIyQxlh4Icj-dC';
 const RECIPIENT_EMAIL = 'fo.dorycenter@gmail.com'; // Email nhận kết quả
 
 document.addEventListener('DOMContentLoaded', () => {
