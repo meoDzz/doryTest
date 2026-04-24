@@ -430,17 +430,41 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('score-display').textContent = `Your Score: ${score} / ${allQuestions.length}`;
             document.getElementById('result-message').textContent = 'Thank you for completing the test.';
         }
+        // ... (phần trên của hàm submitTest giữ nguyên)
+
+        // 1. Ép tất cả dữ liệu thành chuỗi (String) để tránh lỗi 422 định dạng
         const templateParams = {
-            ...studentInfo, test_set: selectedTestSet.setName, section: currentSection.toUpperCase(),
-            score: (currentSection !== 'writing') ? score : 'N/A',
-            total: (currentSection !== 'writing') ? totalQuestions : 'N/A', answers: answerDetails, recipient: RECIPIENT_EMAIL
+            fullName: studentInfo.fullName || "N/A",
+            className: studentInfo.className || "N/A",
+            dob: studentInfo.dob || "N/A",
+            phone: studentInfo.phone || "N/A",
+            email: studentInfo.email || "N/A",
+            test_set: selectedTestSet.setName || "N/A",
+            section: currentSection.toUpperCase(),
+            score: String((currentSection !== 'writing') ? score : 'N/A'), // Ép về String
+            total: String((currentSection !== 'writing') ? totalQuestions : 'N/A'), // Ép về String
+            answers: answerDetails || "No content",
+            recipient: RECIPIENT_EMAIL
         };
-        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-            .then(response => {
-               document.getElementById('result-message').textContent += ' Results have been sent successfully.';
-            }, error => {
-               document.getElementById('result-message').textContent += ' Failed to send results via email.';
-            });
+
+        console.log("Kiểm tra dữ liệu gửi đi:", templateParams); // In ra F12 để kiểm tra
+
+        // 2. Truyền thẳng PUBLIC_KEY vào hàm send cho ổn định
+        emailjs.send(
+            EMAILJS_SERVICE_ID, 
+            EMAILJS_TEMPLATE_ID, 
+            templateParams, 
+            EMAILJS_PUBLIC_KEY
+        )
+        .then(response => {
+            console.log('GỬI THÀNH CÔNG!', response.status, response.text);
+            document.getElementById('result-message').innerHTML += '<br><b style="color: green;">✔ Results have been sent successfully.</b>';
+        })
+        .catch(error => {
+            console.error('LỖI GỬI EMAIL:', error);
+            document.getElementById('result-message').innerHTML += `<br><b style="color: red;">✘ Failed to send results (Error: ${error.status || 'Unknown'}). Vui lòng xem log F12.</b>`;
+        });
+    } // Kết thúc hàm submitTest
     }
 
     restartBtn.addEventListener('click', () => {
