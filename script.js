@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('result-message').innerHTML += `<br><b style="color: red;">✘ Failed to send results (Error: ${error.status || 'Unknown'}). Vui lòng xem log F12.</b>`;
         });
     } // Kết thúc hàm submitTest
-    }
+    
 
     restartBtn.addEventListener('click', () => {
         timerDisplay.textContent = "Time Left: 00:00";
